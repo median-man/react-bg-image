@@ -2,7 +2,7 @@
 Example of creating a full screen background with React and React Router DOM. That is specific
 to a page loading using React Router.
 
-## App.css
+## index.css
 Add the following required rules index.css
 ```css
 html, body {
