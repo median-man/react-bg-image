@@ -3,35 +3,33 @@ Example of creating a full screen background with React and React Router DOM. Th
 to a page loading using React Router.
 
 ## App.css
-Add the following rules to App.css.
+Add the following required rules index.css
 ```css
-html, body, #root, .App {  
+html, body {
   height: 100%;
-  min-height: 100%;
 }
 ```
-All ancestor nodes of the page must have the `height` and `min-height` set to `100%`.
 
-## Page Component
-Add CSS rules to make the page fill the window:
+Optional sizing and positioning of background image:
 ```css
-.Page {
-  min-height: 100%;
+body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: top left;
 }
 ```
 
-Import the image and css:
+## Page Component
+
+Import the image:
 ```javascript
 import Background from './bg-image.jpg';
-import './Page.css';
 ```
 
-Set the background image for the root node of the component.
+Set the background image style for the `<body>` when the component is mounted:
 ```jsx
-<div className="Home" style={{ backgroundImage: `url("${Background}")` }}>
-
-</div>
+componentDidMount() {
+  document.body.style.backgroundImage = `url("${Background}")`;
+}
 ```
