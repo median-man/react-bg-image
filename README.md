@@ -1,6 +1,5 @@
 # Full Screen Background for React
-Example of creating a full screen background with React and React Router DOM. That is specific
-to a page loading using React Router.
+Example code for changing the page background image when using React Router.
 
 ## index.css
 Add the following required rules index.css
