@@ -1,17 +1,18 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import HalfDome from './pages';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1 className="App-title">Welcome to React</h1>
-      </header>
-      <p className="App-intro">
-        To get started, edit <code>src/App.js</code> and save to reload.
-      </p>
-    </div>
-  );
+      <Router>
+        <div className="App">
+          <Route exact path="/" component={HalfDome} />
+          <Route path="/halfdome" component={HalfDome} />
+        </div>
+      </Router>
+    </div>);
 }
 
 export default App;
